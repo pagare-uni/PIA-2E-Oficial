@@ -7,14 +7,14 @@ if [ $# -lt 1 ]; then
 fi
 
 # Parámetro de entrada
-DIRECTORY=$1
-REPORT="ReportPerm.txt"
+DIRECTORY=$1 #Variable que almacena la ruta que se va a escanear
+REPORT="ReportPerm.txt"   #Nombre del archivo que se va a generar
 
 # Función para revisar los permisos de todos los archivos y listarlos en el reporte
 list_files_per() {
     echo "Listando permisos de todos los archivos en el directorio: $DIRECTORY"
     
-    # Comprobar si el directorio existe
+    # Comprobar si el directorio existe y si no existe te lo dira 
     if [ ! -d "$DIRECTORY" ]; then
         echo "Error: El directorio $DIRECTORY no existe."
         return 1
@@ -23,7 +23,7 @@ list_files_per() {
     # Listar todos los archivos con sus permisos y guardarlos en el reporte
     find "$DIRECTORY" -type f -exec ls -l {} \; > "$REPORT" 2>/dev/null
 
-    # Verificar si el comando fue exitoso
+    # Verificar si el comando funciono 
     if [ $? -eq 0 ]; then
         echo "Reporte generado: $REPORT"
     else
@@ -38,15 +38,15 @@ check_insfiles() {
     
     if [ ! -d "$DIRECTORY" ]; then
         echo "Error: El directorio $DIRECTORY no existe."
-        #Le asignamos como nueva ruta la actual
+        #Le asignamos como nueva ruta la actual 
         DIRECTORY=$(pwd)
-        echo "Ruta cambiada a $DIRECTORY"
+        echo "Ruta cambiada a $DIRECTORY" 
         return 1
     fi
 
     # Buscar archivos con permisos 777
     archivos_inseguros=$(find "$DIRECTORY" -type f -perm 777 2>/dev/null)
-
+    # Si se encontraron archivos inseguros los mostrara y si no mostrara que no hay 
     if [ -z "$archivos_inseguros" ]; then
         echo "No se encontraron archivos con permisos inseguros en $DIRECTORY."
     else
@@ -65,7 +65,7 @@ change_perm() {
     done
 }
 
-# Función para mostrar el menu
+# Función para mostrar el menu con sus funciones
 show_menu() {
     echo ""
     echo "Menu de funcionalidades:"
@@ -78,7 +78,7 @@ show_menu() {
     echo ""
 }
 
-# Mostrar menú y realizar acciones
+# Ciclo paraMostrar menú y realizar acciones
 while true; do
     echo ""
     show_menu
