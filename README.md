@@ -27,3 +27,6 @@ https://blogs.upm.es/estudiaciencia/bucles-y-condicionales/
 https://www.aluracursos.com/blog/entendiendo-las-permisiones-en-el-linux
 
 https://es.stackoverflow.com/questions/362278/guardar-la-ruta-en-variable-al-usar-find
+
+https://www.ionos.mx/digitalguide/servidores/configuracion/comando-ping-de-linux/#:~:text=%C2%BFC%C3%B3mo%20funciona%20el%20comando%20ping,o%20su%20nombre%20de%20host.
+
