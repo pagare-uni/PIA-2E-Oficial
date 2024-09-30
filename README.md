@@ -30,3 +30,8 @@ https://es.stackoverflow.com/questions/362278/guardar-la-ruta-en-variable-al-usa
 
 https://www.ionos.mx/digitalguide/servidores/configuracion/comando-ping-de-linux/#:~:text=%C2%BFC%C3%B3mo%20funciona%20el%20comando%20ping,o%20su%20nombre%20de%20host.
 
+https://catonmat.net/tcp-port-scanner-in-bash
+
+https://andreafortuna.org/2021/03/06/some-useful-tips-about-dev-tcp/
+
+https://etherarp.net/bash-port-scaner/index.html
